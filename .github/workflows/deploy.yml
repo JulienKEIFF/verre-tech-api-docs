@@ -20,3 +20,5 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_PASSWORD }}
         registry: docker.pkg.github.com
         tags: "latest,${{ env.STATE_RELEASE_VERSION }}"
+      env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
