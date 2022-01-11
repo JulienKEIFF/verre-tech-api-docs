@@ -1,5 +1,5 @@
-FROM alpine:3.11
-RUN apk --no-cache add nodejs npm
-COPY . .
+FROM node:lts-alpine
+COPY package*.json ./
 RUN npm i
+EXPOSE 3000
 CMD ["node", "./bin/www"]
