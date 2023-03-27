@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: julienkeiff/docker-registry/verre-tech-api
         pre: echo ::save-state name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
